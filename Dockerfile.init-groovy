@@ -1,3 +1,3 @@
 FROM 'jenkins/jenkins:slim'
 
-COPY init.groovy.d/* /usr/share/jenkins/ref/init.groovy.d/
+COPY ref/init.groovy.d/* /usr/share/jenkins/ref/init.groovy.d/
