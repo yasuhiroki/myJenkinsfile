@@ -4,3 +4,4 @@ docker-workflow
 blueocean
 blueocean-pipeline-editor
 sse-gateway
+docker-plugin
