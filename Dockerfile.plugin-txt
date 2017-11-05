@@ -1,6 +1,6 @@
 FROM 'jenkins/jenkins:slim'
 
-COPY plugins.txt plugins.txt
-RUN install-plugins.sh < plugins.txt
+COPY plugins.txt /var/jenkins_home/plugins.txt
+RUN install-plugins.sh < /var/jenkins_home/plugins.txt
 
 COPY ref/config.xml.override /usr/share/jenkins/ref/
