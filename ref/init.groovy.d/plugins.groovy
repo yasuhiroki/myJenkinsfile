@@ -5,6 +5,7 @@ def plugins   = [
     "git",
     "workflow-aggregator",
     "docker-workflow",
+    "blueocean",
     "blueocean-pipeline-editor",
 ]
 
