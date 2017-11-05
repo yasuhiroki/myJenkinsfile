@@ -1,3 +1,5 @@
 FROM 'jenkins/jenkins:slim'
 
 COPY ref/init.groovy.d/* /usr/share/jenkins/ref/init.groovy.d/
+
+COPY ref/config.xml.override /usr/share/jenkins/ref/
