@@ -10,11 +10,43 @@ services:
       - 50000:50000
     environment:
       JAVA_OPTS: "-Djenkins.install.runSetupWizard=false"
-  agent:
+  maid1:
     image: jenkinsci/jnlp-slave:alpine
     environment:
       JENKINS_URL: "http://jenkins:8080"
-      JENKINS_SECRET: "5e0e21af79c7d8c2559d635d57491dd0fd78ec422f26e759c4add3628e434a46"
-      JENKINS_AGENT_NAME: agent
+      JENKINS_SECRET: "41d501472a3bf9c31e42b171199bf9c97c9a1ebefb6abef4dba2ab320da3fa35"
+      JENKINS_AGENT_NAME: maid1
+    links:
+      - jenkins
+  maid2:
+    image: jenkinsci/jnlp-slave:alpine
+    environment:
+      JENKINS_URL: "http://jenkins:8080"
+      JENKINS_SECRET: "370a7951d3b1f7c749403a9146279008f027357f818ded6181d093bad93a3e9b"
+      JENKINS_AGENT_NAME: maid2
+    links:
+      - jenkins
+  maid3:
+    image: jenkinsci/jnlp-slave:alpine
+    environment:
+      JENKINS_URL: "http://jenkins:8080"
+      JENKINS_SECRET: "1bbd3d1b8075adf664a781f7a678edfe61f33df048e6b479118968047ec4ed26"
+      JENKINS_AGENT_NAME: maid3
+    links:
+      - jenkins
+  maid4:
+    image: jenkinsci/jnlp-slave:alpine
+    environment:
+      JENKINS_URL: "http://jenkins:8080"
+      JENKINS_SECRET: "3d5d0a1aab38f53aec217791c4032a3a1d1750e06bab628a1535636788e55aca"
+      JENKINS_AGENT_NAME: maid4
+    links:
+      - jenkins
+  maid5:
+    image: jenkinsci/jnlp-slave:alpine
+    environment:
+      JENKINS_URL: "http://jenkins:8080"
+      JENKINS_SECRET: "510e555e9e86d27ab97eefc983f47ace174b1423474302dcaf2b80f82a45b9ba"
+      JENKINS_AGENT_NAME: maid5
     links:
       - jenkins

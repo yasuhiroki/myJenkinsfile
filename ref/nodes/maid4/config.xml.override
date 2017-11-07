@@ -1,6 +1,6 @@
 <?xml version='1.0' encoding='UTF-8'?>
 <slave>
-  <name>agent</name>
+  <name>maid4</name>
   <description></description>
   <remoteFS>/home/jenkins/agent</remoteFS>
   <numExecutors>1</numExecutors>
@@ -13,6 +13,6 @@
       <failIfWorkDirIsMissing>false</failIfWorkDirIsMissing>
     </workDirSettings>
   </launcher>
-  <label></label>
+  <label>maid</label>
   <nodeProperties/>
 </slave>

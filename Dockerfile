@@ -15,6 +15,6 @@ RUN usermod -a -G staff jenkins
 
 USER jenkins
 COPY ref/config.xml.override /usr/share/jenkins/ref/
-COPY ref/nodes/agent/config.xml.override /usr/share/jenkins/ref/nodes/agent/
+COPY ref/nodes /usr/share/jenkins/ref/nodes
 COPY plugins.txt /var/jenkins_home/plugins.txt
 RUN install-plugins.sh < /var/jenkins_home/plugins.txt
