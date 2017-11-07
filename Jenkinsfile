@@ -1,5 +1,8 @@
 pipeline {
     agent any
+
+    triggers { cron('H 9 * * *') }
+
     stages {
         stage('isPrime?') {
             steps {
