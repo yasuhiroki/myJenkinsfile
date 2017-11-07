@@ -3,14 +3,14 @@ pipeline {
     stages {
         stage('isPrime?') {
             steps {
-                echo 'factor $(date +%Y%m%d) | awk "NF==2" | grep -sq .'
+                sh 'factor $(date +%Y%m%d) | awk "NF==2" | grep -sq .'
             }
         }
 
         stage('isNabeatsu?') {
             steps {
-                echo 'date +%Y%m%d | grep -sq 3'
-                echo 'factor $(date +%Y%m%d) | grep -sq "\b3\b"'
+                sh 'date +%Y%m%d | grep -sq 3'
+                sh 'factor $(date +%Y%m%d) | grep -sq "\b3\b"'
             }
         }
     }
