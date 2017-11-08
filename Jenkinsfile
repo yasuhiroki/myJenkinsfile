@@ -6,7 +6,7 @@ pipeline {
             steps {
                 script {
                     def parallels = [:]
-                    def bombIdx = (int)(Math.random()*20)
+                    def bombIdx = 3
                     for (int i = 0; i < 20; ++i) {
                         parallels[i] = {
                             stage("${i}") {
