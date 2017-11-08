@@ -7,8 +7,9 @@ pipeline {
                 script {
                     def parallels = [:]
                     def bombIdx = 3
-                    for (int i = 0; i < 20; ++i) {
-                        parallels[i] = {
+
+                    def Closure getFunc(i) {
+                        return {
                             stage("${i}") {
                                 input "刺す？"
                                 if (i == bombIdx) {
@@ -18,6 +19,9 @@ pipeline {
                                 }
                             }
                         }
+                    }
+                    for (int i = 0; i < 20; ++i) {
+                        parallels[i] = getFunc(i)
                     }
                     parallel(parallels)
                 }
