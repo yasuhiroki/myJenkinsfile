@@ -7,12 +7,12 @@ pipeline {
                 script {
                     def parallels = [:]
                     def bombIdx = 3
-
-                    def Closure getFunc(i) {
-                        return {
-                            stage("${i}") {
+                    for (int i = 0; i < 20; ++i) {
+                        int j = i;
+                        parallels[i] = {
+                            stage("${j}") {
                                 input "刺す？"
-                                if (i == bombIdx) {
+                                if (j == bombIdx) {
                                     sh "docker restart myjenkinsfile_jenkins_1"
                                 } else {
                                     echo "セーフ"
@@ -20,12 +20,10 @@ pipeline {
                             }
                         }
                     }
-                    for (int i = 0; i < 20; ++i) {
-                        parallels[i] = getFunc(i)
-                    }
                     parallel(parallels)
                 }
             }
         }
     }
 }
+
