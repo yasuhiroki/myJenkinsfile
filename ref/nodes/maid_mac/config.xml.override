@@ -2,7 +2,7 @@
 <slave>
   <name>maid_mac</name>
   <description></description>
-  <remoteFS>$HOME/local/kiyokins/maid_mac</remoteFS>
+  <remoteFS>/Users/a10lab-yasuhiroki/local/kiyokins/maid_mac/</remoteFS>
   <numExecutors>1</numExecutors>
   <mode>NORMAL</mode>
   <retentionStrategy class="hudson.slaves.RetentionStrategy$Always"/>
