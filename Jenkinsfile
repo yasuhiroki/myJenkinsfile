@@ -8,7 +8,7 @@ pipeline {
     stages {
         stage('Run') {
             steps {
-                sh 'terminal-notifier -remove ALL'
+                sh '/usr/local/bin/terminal-notifier -remove ALL'
             }
         }
     }
