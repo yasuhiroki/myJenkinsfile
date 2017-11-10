@@ -1,5 +1,7 @@
 pipeline {
-    agent mac
+    agent {
+        node "mac"
+    }
 
     triggers { cron('H * * * *') }
 
